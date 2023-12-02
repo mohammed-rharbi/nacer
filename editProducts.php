@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Update the product information in the database
     $stmt = $conn->prepare("UPDATE `products` SET `prod_name` = :name, `purchasePrice` = :purchasePrice, `priceOffer` = :priceOffer, `finalPrice` = :finalPrice, `minQuantity` = :minQuantity, `stockQuantity` = :stockQuantity, img = :imag , `description` = :description WHERE `id` = :id");
 
-    move_uploaded_file ($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\ELECTRO_NACER_B6\img\\' . $_FILES['img']['name'] );
+    move_uploaded_file ($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\ELECTRO_NACER_B6\nacer\img\\' . $_FILES['img']['name'] );
 
 
  

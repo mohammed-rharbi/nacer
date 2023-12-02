@@ -12,15 +12,6 @@ if (isset($_POST['logout'])) {
 <?php
 
 
-
-
-
-// if (!empty($_SESSION['admin'])) {
-//     header("Location: http://localhost/ELECTRO_NACER_B6/admin.php");
-// } else if (!empty($_SESSION['user'])) {
-//     header("Location: http://localhost/ELECTRO_NACER_B6/products.php");
-// }
-
 if (isset($_POST['login'])) {
 
     $email = $_POST['email'];
@@ -35,15 +26,15 @@ if (isset($_POST['login'])) {
     if ($user > 0) {
         if ($user['role'] == 'admin') {
             $_SESSION['admin'] = $user;
-            header("Location: http://localhost/ELECTRO_NACER_B6/admin.php");
+            header("Location: admin.php");
             exit();
         } elseif ($user['role'] == 'user'){
             $_SESSION['user'] = $user;
-            header("Location: http://localhost/ELECTRO_NACER_B6/products.php");
+            header("Location: products.php");
             exit();
         }else{
             $_SESSION['unverified'] = $user;
-            header("Location: http://localhost/ELECTRO_NACER_B6/unverified.php");
+            header("Location: unverified.php");
             exit();
         }
         

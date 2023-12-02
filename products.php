@@ -59,23 +59,24 @@ $categories = $stmt1->fetchAll();
 
     <?php foreach ($products as $product) { ?>
       <div class="col-md-4 mb-5">
-        <div id="cardi" class="cols-sm-4 card rounded-3" style="width: 18rem;">
-          <h5 class="card-title text-black text-center mb-4 p-2"><?php echo $product['prod_name']; ?></h5>
-          <img src="<?php echo $product['img']; ?>" class="card-img-top" alt="...">
+        <div id="cardi" class="cols-sm-4 card rounded-3 " style="width: 20rem;">
+        <h3 class="card-title text-black text-center mt-2 p-2"><?php echo $product['prod_name']; ?></h3>
+        <img src="<?php echo $product['img']; ?>" class="mt-5 card-img-top" width="100" height="160" alt="...">
           <div class="card-body">
-            <h2 class="card-text text-danger fw-bold" id="price"><?php echo $product['finalPrice']; ?></h2>
+            <h2 class="card-text text-info fw-bold" id="price"><?php echo $product['finalPrice']; ?></h2>
+            <h5 class="card-text text-danger fw-bold" id="price"><del><?php echo $product['priceOffer']; ?></del></h5>
           </div>
         </div>
       </div>
 
-
-
-
-
-
     <?php } ?>
   </div>
 </div>
+
+
+
+
+
 
 
 <?php require('./footer.php') ?>

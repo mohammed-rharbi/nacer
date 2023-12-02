@@ -2,14 +2,8 @@
 <?php require('./connection.php') ?>
 
 <?php
-if (empty($_SESSION['admin'])) {
-  header("Location: http://localhost/ELECTRO_NACER_B6/login.php");
-} else if (!empty($_SESSION['user'])) {
-  header("Location: http://localhost/ELECTRO_NACER_B6/login.php");
-}
 
 if (isset($_POST['delete'])) {
-
   $id = $_POST['delete'];
   $stmtd = $conn->prepare("DELETE FROM users WHERE user_id = '$id'");
   $stmtd->execute();
@@ -33,7 +27,6 @@ if (isset($_POST['hide'])) {
 
 if (isset($_POST['edit'])) {
   setcookie("productId", $_POST['edit']);
-  // print_r($_COOKIE['productId']);
   header("Location: editProducts.php");
   exit;
 }
@@ -110,16 +103,6 @@ if(isset($_POST['editCatg'])) {
   </table>
 </div>
 
-
-
-
-
-
-
-
-
-
-
 <div class="container mt-4" id="productsTable" style="display: none;">
   <h2>products Table</h2>
   <table class="table">
@@ -136,6 +119,7 @@ if(isset($_POST['editCatg'])) {
         <th>description</th>
         <th>min quantity</th>
         <th>stock quantity</th>
+        <th>category</th>
         <th>edit</th>
       </tr>
     </thead>
@@ -160,6 +144,7 @@ if(isset($_POST['editCatg'])) {
           <td><?php echo $product['description']; ?></td>
           <td><?php echo $product['minQuantity']; ?></td>
           <td><?php echo $product['stockQuantity']; ?></td>
+          <td><?php echo $product['catg']; ?></td>
           <td>
             <form method="POST">
               <button type="submit" name="hide" value=<?php echo $product['id'] ?> class="btn btn-danger">hide</button>
@@ -173,10 +158,6 @@ if(isset($_POST['editCatg'])) {
   <a class="btn btn-primary" href="addproduct.php" role="button">add product</a>
 
 </div>
-
-
-
-
 
 <div class="container mt-4" id="categoryTable" style="display: none;">
   <h2>category Table</h2>
@@ -216,13 +197,6 @@ if(isset($_POST['editCatg'])) {
   <a class="btn btn-primary" href="addCategory.php" role="button">add category</a>
 
 </div>
-
-
-
-
-
-
-
 
 <script>
   function showUsers() {

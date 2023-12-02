@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Update the product information in the database
     $stmt = $conn->prepare("UPDATE `category` SET `cat_name` = '$name', cat_img = '$img' , `cat_description` = '$description' WHERE `cat_name` = '$nameCat'");
 
-    move_uploaded_file ($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\ELECTRO_NACER_B6\img\\' . $_FILES['img']['name'] );
+    move_uploaded_file ($_FILES['img']['tmp_name'], 'C:\xampp\htdocs\ELECTRO_NACER_B6\nacer\img\\' . $_FILES['img']['name'] );
 
 
   
