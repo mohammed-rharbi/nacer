@@ -59,40 +59,40 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <img src="<?php echo $result['img'] ?>" alt="" width="150px">
     </div>
     <div class="form-group">
-        <label for="exampleFormControlInput1">Product Name</label>
+        <label for="productname" class="text-white">Product Name</label>
         <input type="text" class="form-control" name="editName" id="exampleFormControlInput1" value="<?php echo $result['prod_name'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="purchasePrice">purchase Price</label>
+        <label for="purchasePrice" class="text-white">purchase Price</label>
         <input type="number" class="form-control" name="purchasePrice" id="purchasePrice" value="<?php echo $result['purchasePrice'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="priceOffer">price offer</label>
+        <label for="priceOffer" class="text-white">price offer</label>
         <input type="number" class="form-control" name="priceOffer" id="priceOffer" value="<?php echo $result['priceOffer'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="finalPrice">final price</label>
+        <label for="finalPrice" class="text-white">final price</label>
         <input type="number" class="form-control" name="finalPrice" id="finalPrice" value="<?php echo $result['finalPrice'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="minQuantity">min quantity</label>
+        <label for="minQuantity" class="text-white">min quantity</label>
         <input type="number" class="form-control" name="minQuantity" id="minQuantity" value="<?php echo $result['minQuantity'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="stockQuantity">stock quantity</label>
+        <label for="stockQuantity" class="text-white">stock quantity</label>
         <input type="number" class="form-control" name="stockQuantity" id="stockQuantity" value="<?php echo $result['stockQuantity'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="description">Product description</label>
+        <label for="description" class="text-white">Product description</label>
         <input type="text" class="form-control" name="description" id="description" value="<?php echo $result['description'] ?? ''; ?>">
     </div>
     <div class="form-group">
-        <label for="img">Product img</label>
+        <label for="img" class="text-white">Product img</label>
         <input type="file" class="form-control" name="img" id="img">
     </div>
 
 
-    <input type="submit" name="btn" class="btn bg-info mt-3">
+    <input type="submit" name="btn" class="btn bg-info mt-3 mb-5">
 </form>
 
 <!-- Rest of your HTML content -->

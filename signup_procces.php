@@ -35,7 +35,7 @@ $result = $stmt->execute();
     if ($result) {
       
         echo "Registration successful! please wait for admin verification";
-        echo'<h1 class="text-center mt-5">please wait for admin verification</h1>
+        echo'<h1 class="text-center text-white mt-5">please wait for admin verification</h1>
         <a href="index.php">
         <div class="text-center mt-5">
             <button  type="submit" class="btn btn-primary">back to login page</button>

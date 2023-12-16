@@ -58,9 +58,9 @@ if(isset($_POST['editCatg'])) {
 
 
 <div class="container mt-4" id="usersTable" style="display:block;">
-  <h2>users Table</h2>
-  <table class="table">
-    <thead>
+  <h2 class="text-white mb-3">users Table</h2>
+  <table class="table mb-5 table-hover">
+    <thead class="table-info">
       <tr>
         <th>Id</th>
         <th>Name</th>
@@ -104,9 +104,9 @@ if(isset($_POST['editCatg'])) {
 </div>
 
 <div class="container mt-4" id="productsTable" style="display: none;">
-  <h2>products Table</h2>
-  <table class="table">
-    <thead>
+  <h2 class="text-white mb-3">products Table</h2>
+  <table class="table table-hover">
+    <thead class="table-info">
       <tr>
         <th>img</th>
         <th>ID</th>
@@ -125,7 +125,7 @@ if(isset($_POST['editCatg'])) {
     </thead>
     <tbody>
       <?php
-      // Fetch users
+      // Fetch products
       $stmt = $conn->prepare("SELECT * FROM products WHERE hide = 1");
       $stmt->execute();
       $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -138,9 +138,9 @@ if(isset($_POST['editCatg'])) {
           <td><?php echo $product['prod_reference']; ?></td>
           <td><?php echo $product['barcode']; ?></td>
           <td><?php echo $product['prod_name']; ?></td>
-          <td><?php echo $product['purchasePrice']; ?></td>
-          <td><?php echo $product['finalPrice']; ?></td>
-          <td><?php echo $product['priceOffer']; ?></td>
+          <td><?php echo $product['purchasePrice'] . ' DH'; ?></td>
+          <td><?php echo $product['finalPrice'] . ' DH';?></td>
+          <td><?php echo $product['priceOffer'] . ' DH'; ?></td>
           <td><?php echo $product['description']; ?></td>
           <td><?php echo $product['minQuantity']; ?></td>
           <td><?php echo $product['stockQuantity']; ?></td>
@@ -155,14 +155,14 @@ if(isset($_POST['editCatg'])) {
     </tbody>
   </table>
 
-  <a class="btn btn-primary" href="addproduct.php" role="button">add product</a>
+  <a class="btn btn-primary mb-5" href="addproduct.php" role="button">add product</a>
 
 </div>
 
 <div class="container mt-4" id="categoryTable" style="display: none;">
-  <h2>category Table</h2>
-  <table class="table">
-    <thead>
+  <h2 class="text-white mb-3">category Table</h2>
+  <table class="table table-hover">
+    <thead class="table-info">
       <tr>
         <th>Name</th>
         <th>desription</th>
@@ -171,7 +171,7 @@ if(isset($_POST['editCatg'])) {
       </tr>
     </thead>
     <?php
-    // Fetch users
+    // Fetch categoryes
     $stmt = $conn->prepare("SELECT * FROM category WHERE hide = 1");
     $stmt->execute();
     $category = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -194,32 +194,12 @@ if(isset($_POST['editCatg'])) {
     <?php endforeach; ?>
   </table>
 
-  <a class="btn btn-primary" href="addCategory.php" role="button">add category</a>
+  <a class="btn btn-primary mb-5" href="addCategory.php" role="button">add category</a>
 
 </div>
 
-<script>
-  function showUsers() {
-    document.getElementById('usersTable').style.display = 'block';
-    document.getElementById('productsTable').style.display = 'none';
-    document.getElementById('categoryTable').style.display = 'none';
-  }
 
-  function showProducts() {
-    document.getElementById('productsTable').style.display = 'block';
-    document.getElementById('usersTable').style.display = 'none';
-    document.getElementById('categoryTable').style.display = 'none';
-  }
-
-  function showCategory() {
-    document.getElementById('categoryTable').style.display = 'block';
-    document.getElementById('usersTable').style.display = 'none';
-    document.getElementById('productsTable').style.display = 'none';
-  }
-</script>
-
-
-
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 

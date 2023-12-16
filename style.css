@@ -13,7 +13,8 @@
 
 body{
    
-    background:linear-gradient(rgb(212, 149, 223rgb(196, 194, 201)9))
+ background:linear-gradient(rgb(20,37,81,1),rgb(14,28,54,1));
+ background-size: cover;
 }
 
 #forma{
@@ -23,9 +24,13 @@ body{
 }
 
 #navbar{
-    background-color: rgb(97, 95, 168);
+    background-color:rgb(31, 52, 109);
 }
 
 #navlist{
     background-color: rgb(59, 32, 85);
+}
+#cardi{
+    background-color:rgb(31, 52, 109)
+
 }

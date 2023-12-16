@@ -70,43 +70,43 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <form method="post" class="container mt-5 gap-4" enctype="multipart/form-data">
     
     <div class="form-group">
-        <label for="exampleFormControlInput1">Product Name</label>
+        <label for="productname" class="text-white">Product Name</label>
         <input type="text" class="form-control" name="prodName" id="exampleFormControlInput1">
     </div>
     <div class="form-group">
-        <label for="purchasePrice">product reference</label>
+        <label for="purchasePrice" class="text-white">product reference</label>
         <input type="number" class="form-control" name="ref" id="purchasePrice" min="0">
     </div>
     <div class="form-group">
-        <label for="purchasePrice">barcode</label>
+        <label for="purchasePrice" class="text-white">barcode</label>
         <input type="number" class="form-control" name="barcode" id="purchasePrice" min="0">
     </div>
     <div class="form-group">
-        <label for="purchasePrice">purchase Price</label>
+        <label for="purchasePrice" class="text-white">purchase Price</label>
         <input type="number" class="form-control" name="purchasePrice" id="purchasePrice" min="0">
     </div>
     <div class="form-group">
-        <label for="priceOffer">price offer</label>
+        <label for="priceOffer" class="text-white">price offer</label>
         <input type="number" class="form-control" name="priceOffer" id="priceOffer" min="0">
     </div>
     <div class="form-group">
-        <label for="finalPrice">final price</label>
+        <label for="finalPrice" class="text-white">final price</label>
         <input type="number" class="form-control" name="finalPrice" id="finalPrice" min="0">
     </div>
     <div class="form-group">
-        <label for="minQuantity">min quantity</label>
+        <label for="minQuantity" class="text-white">min quantity</label>
         <input type="number" class="form-control" name="minQuantity" id="minQuantity" min="0">
     </div>
     <div class="form-group">
-        <label for="stockQuantity">stock quantity</label>
+        <label for="stockQuantity" class="text-white">stock quantity</label>
         <input type="number" class="form-control" name="stockQuantity" id="stockQuantity" min="0">
     </div>
     <div class="form-group">
-        <label for="description">Product description</label>
+        <label for="description" class="text-white">Product description</label>
         <input type="text" class="form-control" name="description" id="description">
     </div>
     <div class="form-group">
-        <label for="cat">category</label>
+        <label for="cat" class="text-white">category</label>
         <select  class="form-control" name="cat" id="cat">
             <?php foreach($catgs as $item): ?>
                 <option><?php echo $item['cat_name'] ?></option>
@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="file" class="form-control" name="img" id="img">
     </div>
 
-    <input type="submit" name="btn" class="btn bg-info mt-3">
+    <input type="submit" name="btn" class="btn bg-info mt-3 mb-5">
 </form>
 
 <!-- Rest of your HTML content -->

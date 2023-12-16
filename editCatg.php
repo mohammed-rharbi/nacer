@@ -49,16 +49,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <img src="<?php echo $result['cat_img'] ?>" alt="" width="150px">
     </div>
     <div class="form-group">
-        <label for="exampleFormControlInput1">Category Name</label>
-        <input type="text" class="form-control" name="editName" id="exampleFormControlInput1" value="<?php echo $result['cat_name'] ?? ''; ?>">
+        <label for="catname" class="text-white">Category Name</label>
+        <input type="text" class="form-control" name="editName" id="catname" value="<?php echo $result['cat_name'] ?? ''; ?>">
     </div>
    
     <div class="form-group">
-        <label for="description">Product description</label>
+        <label for="description" class="text-white">Product description</label>
         <textarea type="text" class="form-control" name="description" id="description"><?php echo $result['cat_description'] ?? ''; ?></textarea>
     </div>
     <div class="form-group">
-        <label for="img">Product img</label>
+        <label for="img" class="text-white">Product img</label>
         <input type="file" class="form-control" name="img" id="img">
     </div>
 
